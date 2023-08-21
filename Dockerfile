@@ -47,4 +47,6 @@ LABEL org.opencontainers.image.authors "Carlos Eduardo Mota <carlos.mota@sgb.gov
 # Copy built
 COPY --from=BUILDER /root/geowebcache/src/web/target/geowebcache/ ${CATALINA_HOME}/webapps/geowebcache/
 
+EXPOSE 8080
+
 CMD ["catalina.sh", "run"]
